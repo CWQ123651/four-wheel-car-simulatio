@@ -27,3 +27,6 @@ x86/
 *.log
 *.tmp
 *.vcxproj.user
+text.txt
+
+
