@@ -26,3 +26,4 @@ x86/
 # аый╠нд╪Ч
 *.log
 *.tmp
+*.vcxproj.user
