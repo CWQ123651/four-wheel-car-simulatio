@@ -51,7 +51,7 @@ make clean
 | 命令 | 功能说明 |
 | --- | --- |
 | `start` | 从待机状态进入运行状态 |
-| `auto forward\|backward\|left\|right <speed>` | 设置自动控制及速度 |
+| `forward\|backward\|left\|right <speed>` | 设置自动控制及速度 |
 | `auto stop` | 设置自动控制为停止 |
 | `manual forward\|backward\|left\|right <speed>` | 设置手动控制及速度（优先级高于自动） |
 | `manual stop` | 设置手动控制为停止 |
@@ -65,7 +65,7 @@ make clean
 ## 约束规则
 
 - 速度参数范围：`0 ~ 100`，超出范围的命令将被忽略
-- 只有 `RUNNING` 运行状态下，运动类命令才会生效
+- 只有`RUNNING`运行状态下，运动类命令才会生效
 - 手动控制优先级高于自动控制
 - 每次执行 `step`，单轮速度最大变化量为 20
 - `emergency` 急停不经过 step，立即清零实际速度
@@ -74,18 +74,23 @@ make clean
 ## 目录结构
 
 ```
-car_sim/
-├── include/        # 头文件，对外接口与类型定义
-├── src/            # 源文件，各模块业务实现
-├── main.c          # 程序入口
-├── Makefile        # GCC编译脚本
-├── .gitignore      # Git忽略规则
-├── test.txt        # 测试用例
-├── README.md       # 项目说明
-└── REVIEW.md       # 项目回顾文档
+include/      # 头文件，对外接口与类型定义
+src/          # 源文件，各模块业务实现
+main.c        # 程序入口
+Makefile      # GCC编译脚本
+.gitignore    # Git忽略规则
+test.txt      # 测试用例
+README.md     # 项目说明
 ```
+
+## 开发环境
+
+GCC / Visual Studio
 
 ```
 
-把上面这段全部替换进你的 `README.md` 即可，内容完整、
+### 小补充（可选加分项，加在文档最后）
+```markdown
+## 项目说明
+本项目为C语言开放工程作业，实现小车状态机仿真，支持命令驱动测试，可使用make一键构建。
 ```
